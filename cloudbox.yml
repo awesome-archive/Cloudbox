@@ -120,3 +120,4 @@
     - { role: nzbthrottle, tags: ['nzbthrottle'] }
     - { role: drive_strm, tags: ['drive_strm', 'drive_strm_rebuild'] }
     - { role: nfs_server, tags: ['nfs_server'] }
+    - { role: nfs_mount, tags: ['nfs_mount'] }
