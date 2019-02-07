@@ -11,19 +11,49 @@
     - { role: pre_tasks }
     - { role: backup, tags: ['backup'] }
     - { role: restore, tags: ['restore'] }
-    - { role: user, tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'user'] }
-    - { role: shell, tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'shell'] }
-    - { role: kernel, tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'kernel'] }
+    - {
+        role: user,
+        tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'user'],
+      }
+    - {
+        role: shell,
+        tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'shell'],
+      }
+    - {
+        role: kernel,
+        tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'kernel'],
+      }
     - { role: pre_install, tags: ['core', 'cloudbox', 'mediabox', 'feederbox'] }
-    - { role: system, tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'system'] }
-    - { role: common, tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'common'] }
-    - { role: motd, tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'motd'] }
-    - { role: docker, tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'docker'] }
+    - {
+        role: system,
+        tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'system'],
+      }
+    - {
+        role: common,
+        tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'common'],
+      }
+    - {
+        role: motd,
+        tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'motd'],
+      }
+    - {
+        role: docker,
+        tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'docker'],
+      }
     - { role: plexdrive, tags: ['core', 'cloudbox', 'mediabox', 'feederbox'] }
     - { role: unionfs, tags: ['core', 'cloudbox', 'mediabox', 'feederbox'] }
-    - { role: rclone, tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'rclone'] }
-    - { role: scripts, tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'scripts'] }
-    - { role: nginx-proxy, tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'nginx-proxy'] }
+    - {
+        role: rclone,
+        tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'rclone'],
+      }
+    - {
+        role: scripts,
+        tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'scripts'],
+      }
+    - {
+        role: nginx-proxy,
+        tags: ['core', 'cloudbox', 'mediabox', 'feederbox', 'nginx-proxy'],
+      }
     - { role: plex, tags: ['cloudbox', 'mediabox', 'plex'] }
     - { role: plexpy, tags: ['cloudbox', 'mediabox', 'plexpy'] }
     - { role: ombi, tags: ['cloudbox', 'mediabox', 'ombi'] }
@@ -31,14 +61,34 @@
     - { role: portainer, tags: ['cloudbox', 'feederbox', 'portainer'] }
     - { role: organizr, tags: ['cloudbox', 'feederbox', 'organizr'] }
     - { role: cloudplow, tags: ['cloudbox', 'feederbox', 'cloudplow'] }
-    - { role: nzbget, tags: ['cloudbox', 'feederbox', 'nzbget'], when: ['run_nzbs'] }
-    - { role: rutorrent, tags: ['cloudbox', 'feederbox', 'rutorrent'], when: ['run_torrents'] }
-    - { role: jackett, tags: ['cloudbox', 'feederbox', 'jackett'], when: ['run_torrents'] }
-    - { role: nzbhydra2, tags: ['cloudbox', 'feederbox', 'nzbhydra2'], when: ['run_nzbs or run_torrents'] }
+    - {
+        role: nzbget,
+        tags: ['cloudbox', 'feederbox', 'nzbget'],
+        when: ['run_nzbs'],
+      }
+    - {
+        role: rutorrent,
+        tags: ['cloudbox', 'feederbox', 'rutorrent'],
+        when: ['run_torrents'],
+      }
+    - {
+        role: jackett,
+        tags: ['cloudbox', 'feederbox', 'jackett'],
+        when: ['run_torrents'],
+      }
+    - {
+        role: nzbhydra2,
+        tags: ['cloudbox', 'feederbox', 'nzbhydra2'],
+        when: ['run_nzbs or run_torrents'],
+      }
     - { role: sonarr, tags: ['cloudbox', 'feederbox', 'sonarr'] }
     - { role: radarr, tags: ['cloudbox', 'feederbox', 'radarr'] }
     - { role: lidarr, tags: ['cloudbox', 'feederbox', 'lidarr'] }
-    - { role: sickbeard_mp4_automator, tags: ['cloudbox', 'feederbox', 'sickbeard_mp4_automator', 'sma'], when: ['sma_enabled'] }
+    - {
+        role: sickbeard_mp4_automator,
+        tags: ['cloudbox', 'feederbox', 'sickbeard_mp4_automator', 'sma'],
+        when: ['sma_enabled'],
+      }
     - { role: feeder-mount, tags: ['feeder-mount'] }
     - { role: feeder-dismount, tags: ['feeder-dismount'] }
     - { role: plex_auth_token, tags: ['plex_auth_token'] }
@@ -69,3 +119,4 @@
     - { role: organizrv1, tags: ['organizrv1'] }
     - { role: nzbthrottle, tags: ['nzbthrottle'] }
     - { role: drive_strm, tags: ['drive_strm', 'drive_strm_rebuild'] }
+    - { role: nfs_server, tags: ['nfs_server'] }
