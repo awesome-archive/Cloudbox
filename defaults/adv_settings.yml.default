@@ -24,3 +24,4 @@ plexrequests:
 sickbeard_mp4_automator: no
 nfs:
   vlan_id: 4000
+  mount_client: 3
