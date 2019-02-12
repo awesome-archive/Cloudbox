@@ -133,7 +133,7 @@
   tags: glances
 
 - name: Install pip glances
-  shell: pip install glances[action,browser,cloud,cpuinfo,docker,export,folders,gpu,graph,ip,raid,snmp,web]
+  shell: pip install glances[action,browser,cloud,cpuinfo,docker,folders,gpu,graph,ip,raid,snmp,web]
   when: (not continuous_integration)
   tags: glances
 
